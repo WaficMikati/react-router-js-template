@@ -9,7 +9,6 @@ export default function App() {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./styles/root.css" />
         <Meta />
         <Links />
       </head>
