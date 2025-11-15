@@ -3,18 +3,20 @@ import { createContext, useContext, useState, useEffect } from 'react'
 const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') || 'dark'
-    }
-    return 'dark'
-  })
+  const [theme, setTheme] = useState('dark')
+  const [isHydrated, setIsHydrated] = useState(false)
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    const savedTheme = localStorage.getItem('theme') || 'dark'
+    setTheme(savedTheme)
+    setIsHydrated(true)
+  }, [])
+
+  useEffect(() => {
+    if (isHydrated) {
       localStorage.setItem('theme', theme)
     }
-  }, [theme])
+  }, [theme, isHydrated])
 
   function toggleTheme() {
     setTheme(prev => (prev === 'dark' ? 'light' : 'dark'))

@@ -1,7 +1,7 @@
 {
-  "name": "contact-list",
+  "name": "react-router-bootstrap-template",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@react-router/fs-routes": "^7.9.6",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",

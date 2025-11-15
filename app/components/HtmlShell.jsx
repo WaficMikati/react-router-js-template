@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Links, Meta, Scripts, ScrollRestoration } from 'react-router'
-import Navbar from './Navbar'
+import Navbar from './nav/Navbar'
 import Footer from './Footer'
 import { useTheme } from '../context/ThemeContext'
 
@@ -20,6 +20,10 @@ export default function HtmlShell({
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1.0'
+        />
+        <meta
+          name='description'
+          content='React Router Template with Bootstrap'
         />
         <title>{title}</title>
         <Meta />

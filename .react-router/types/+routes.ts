@@ -13,10 +13,10 @@ type Pages = {
   "/": {
     params: {};
   };
-  "/about": {
+  "/contact": {
     params: {};
   };
-  "/contact": {
+  "/about": {
     params: {};
   };
 };
@@ -24,7 +24,11 @@ type Pages = {
 type RouteFiles = {
   "root.jsx": {
     id: "root";
-    page: "/" | "/about" | "/contact";
+    page: "/" | "/contact" | "/about";
+  };
+  "routes/contact.jsx": {
+    id: "routes/contact";
+    page: "/contact";
   };
   "routes/_index.jsx": {
     id: "routes/_index";
@@ -33,9 +37,5 @@ type RouteFiles = {
   "routes/about.jsx": {
     id: "routes/about";
     page: "/about";
-  };
-  "routes/contact.jsx": {
-    id: "routes/contact";
-    page: "/contact";
   };
 };
