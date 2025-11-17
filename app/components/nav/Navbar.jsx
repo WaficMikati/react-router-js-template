@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className={`navbar navbar-expand bg-${theme}`}>
       <div className='container-fluid'>
         <NavLink
-          to='/home'
+          to='/'
           end={navLinks[0].end}
           className='nav-brand'
         >
